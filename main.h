@@ -10,11 +10,11 @@
 
 typedef struct format
 {
-    /*Field to hold format specifier*/
-    char *op;
-
     /*Field to hold operation*/
     int (*f)(va_list op_list);
+
+    /*Field to hold format specifier*/
+    char *op;
 
 } form;
 
