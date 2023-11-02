@@ -4,11 +4,7 @@
 
 /***/
 
-form forms[] = {
-    {'c', print_char},
-    {'s', print_str},
-    {'d', print_int},
-    {NULL, NULL}};
+int _printf(const char *format, ...)
 
 int i = 0;
 int tracker = 0;
