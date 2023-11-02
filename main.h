@@ -13,14 +13,14 @@ typedef struct format
     char *op;
 
     /*Field to hold operation*/
-    int (*f)(va_list op_list);
+    int (*f)(va_list args);
 
 } form;
 
 int _printf(const char *format, ...);
 
-int print_char(va_list op_list);
-int print_str(va_list op_list);
-int print_int(va_list op_list);
+int print_char(va_list args);
+int print_str(va_list args);
+int print_int(va_list args);
 
 #endif
