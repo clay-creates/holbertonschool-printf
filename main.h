@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+#include <stdarg.h>
 
 /**
  * FormatSpec - structure for format specifiers
@@ -16,6 +17,8 @@ typedef struct format
     int (*f)(va_list args);
 
 } form;
+
+int (*get_func(char format))(va_list args);
 
 int _printf(const char *format, ...);
 
