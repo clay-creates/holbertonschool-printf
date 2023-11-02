@@ -1,12 +1,12 @@
 #include "main.h"
 
+int (*get_func(char format))(va_list args)
 form forms[] = {
-    {print_char, 'c'},
-    {print_str, 's'},
-    {print_int, 'd'},
+    {'c', print_char},
+    {'s', print_str},
+    {'d', print_int},
     {NULL, NULL}};
 
-int (*get_func(char format))(va_list args)
 {
     int i = 0;
 
