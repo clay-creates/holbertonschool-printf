@@ -14,11 +14,11 @@
 
 typedef struct format
 {
-    /*Field to hold operation*/
-    char (*f)(va_list args);
-
     /*Field to hold format specifier*/
     char *op;
+
+    /*Field to hold operation*/
+    int (*f)(va_list args);
 
 } form;
 
