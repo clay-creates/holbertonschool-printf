@@ -18,6 +18,8 @@ typedef struct format
 
 } form;
 
+int (*get_func(format))(va_list args);
+
 int _printf(const char *format, ...);
 
 int print_char(va_list op_list);
