@@ -2,9 +2,12 @@
 
 int (*get_func(format))(va_list args)
 {
-    while (forms[i] != NULL)
+    int i = 0;
+
+    while (form[i] != NULL)
     {
-        if (forms[i].op == format)
-            (forms[i].*f)
+        if (form[i].op == format)
+            (form[i].*f)
     }
+    i++;
 }
