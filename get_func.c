@@ -1,6 +1,6 @@
 #include "main.h"
 
-int (*get_func(format))(va_list args)
+int (*get_func(char format))(va_list args)
 {
     int i = 0;
 
