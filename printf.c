@@ -9,7 +9,7 @@ int _printf(const char *format, ...)
 /**int i = 0;**/
 /**int tracker = 0;**/
     va_list args;
-    va_start(args, format)
+    va_start(args, format);
 
     while (format != NULL)
     {
