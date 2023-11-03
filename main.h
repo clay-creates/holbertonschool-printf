@@ -18,7 +18,7 @@ typedef struct format
     char op;
 
     /*Field to hold operation*/
-    int (*f)(va_list args);
+    int (*f)(va_list);
 
 } form;
 
@@ -29,5 +29,8 @@ int _printf(const char *format, ...);
 int print_char(va_list args);
 int print_str(va_list args);
 int print_int(va_list args);
+
+int _putint(char);
+int _putchar(char);
 
 #endif

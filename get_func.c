@@ -7,15 +7,16 @@ form forms[] = {
     {'c', print_char},
     {'s', print_str},
     {'d', print_int},
-    {NULL, NULL}};
+    {'\0', NULL}};
 
 
     int i = 0;
 
-    while (form[i] != NULL)
+    while (forms[i].op != '\0')
     {
-        if (form[i].op == format)
-            (form[i].*f)
+        if (forms[i].op == format)
+			return (forms[i].f);
+		i++;
     }
-    i++;
+	return (NULL);
 }
