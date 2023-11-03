@@ -6,8 +6,8 @@
 
 int _printf(const char *format, ...)
 
-int i = 0;
-int tracker = 0;
+/**int i = 0;**/
+/**int tracker = 0;**/
 
 while (format != NULL)
 {
