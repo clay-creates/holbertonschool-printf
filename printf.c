@@ -13,7 +13,8 @@ int _printf(const char *format, ...)
     {
         if (*format == '%') {
                 format++;
-                (*get_func(*format)(va_list, args));
+                return (*get_func(*format)(va_list args));
             }
     }
+    return (-1)
 }
