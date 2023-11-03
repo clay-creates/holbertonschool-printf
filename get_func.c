@@ -18,5 +18,5 @@ form forms[] = {
 			return (forms[i].f);
 		i++;
     }
-	return (-1);
+	return (NULL);
 }
