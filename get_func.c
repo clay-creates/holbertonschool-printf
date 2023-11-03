@@ -12,10 +12,10 @@ form forms[] = {
 
     int i = 0;
 
-    while (form[i] != NULL)
+    while (forms[i] != NULL)
     {
-        if (form[i].op == format)
-            (form[i].*f)
+        if (forms[i].op == format)
+            (forms[i].*f)
     }
     i++;
 }
