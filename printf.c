@@ -11,9 +11,9 @@ int _printf(const char *format, ...)
 
     while (format != NULL)
     {
-        if (format == '%') {
+        if (*format == '%') {
                 format++;
-                (*get_func(*format)(args));
+                (*get_func(*format)(va_list, args));
             }
     }
 }
