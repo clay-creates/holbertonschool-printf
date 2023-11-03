@@ -5,14 +5,15 @@
 /***/
 
 int _printf(const char *format, ...)
-
+{
 /**int i = 0;**/
 /**int tracker = 0;**/
 
-while (format != NULL)
-{
-    if (format == '%' {
-            format++;
-            (*get_func(*format)(args));
-        })
+    while (format != NULL)
+    {
+        if (format == '%') {
+                format++;
+                (*get_func(*format)(args));
+            }
+    }
 }
