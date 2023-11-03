@@ -15,10 +15,14 @@ int _printf(const char *format, ...)
 
     while (format != NULL)
     {
-        if (*format == '%') {
-                format++;
-                tracker += (get_func(*format)(args));
-            }
+        if (*format == '%') 
+        {
+            format++;
+            tracker += (get_func(*format)(args));
+        }
+    _putchar(*format);
+    tracker += 1;
+    format++;
     }
     return (tracker);
 }
