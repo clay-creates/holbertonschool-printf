@@ -14,8 +14,8 @@ form forms[] = {
 
     while (forms[i] != '\0')
     {
-        if (forms[i].op == format)
-            (forms[i].*f)
+        if (forms[1][i].op == format)
+		(forms[1][i].*f);
+		i++
     }
-    i++;
 }
