@@ -15,7 +15,7 @@
 typedef struct format
 {
     /*Field to hold format specifier*/
-    char *op;
+    char op;
 
     /*Field to hold operation*/
     int (*f)(va_list args);
