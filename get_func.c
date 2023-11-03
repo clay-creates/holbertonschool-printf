@@ -12,7 +12,7 @@ form forms[] = {
 
     int i = 0;
 
-    while (forms[i] != NULL)
+    while (forms[i] != '\0')
     {
         if (forms[i].op == format)
             (forms[i].*f)
