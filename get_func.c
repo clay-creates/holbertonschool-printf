@@ -7,7 +7,7 @@ form forms[] = {
     {'c', print_char},
     {'s', print_str},
     {'d', print_int},
-    {NULL, NULL}};
+    {'\0', NULL}};
 
 
     int i = 0;
