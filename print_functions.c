@@ -12,8 +12,8 @@
 
 int print_char(va_list args)
 {
-    return (putchar(va_arg(args, int)));
-    /**return (1);*/
+    putchar(va_arg(args, int));
+    return (1);
 }
 
 /**
