@@ -19,6 +19,7 @@ int _printf(const char *format, ...)
         {
             format++;
             tracker += (get_func(*format)(args));
+            format++;
         }
     _putchar(*format);
     tracker += 1;
