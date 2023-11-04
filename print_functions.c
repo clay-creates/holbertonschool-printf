@@ -27,6 +27,9 @@ int print_char(va_list args)
 int print_str(va_list args)
 {
     char *str;
+    int printed;
+
+    printed = fputs(str, stdout);
     str = va_arg(args, char *);
 
     /**Null check for variable assignment*/
@@ -35,9 +38,6 @@ int print_str(va_list args)
     {
         str = "(nil)";
     }
-
-    int printed;
-    printed = fputs(str, stdout);
 
     /**Return output on success, return 0 on fail*/
 
