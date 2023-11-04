@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 		{
 			skip = 0; /** Reset the flag and do not advance*/
 		}
-		else if (format == "%")
+		else if (*format == '%')
 		{
 			format++;
 			tracker += (get_func(*format)(args));
