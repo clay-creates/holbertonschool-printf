@@ -12,8 +12,8 @@
 
 int print_char(va_list args)
 {
-    putchar(va_arg(args, int));
-    return (1);
+	putchar(va_arg(args, int));
+	return (1);
 }
 
 /**
@@ -26,9 +26,29 @@ int print_char(va_list args)
 
 int print_str(va_list args)
 {
-    puts(va_arg(args, char *));
-    /**returning placeholder*/
-    return (0);
+	char *str;
+	int printed;
+
+	str = va_arg(args, char *);
+	printed = fputs(str, stdout);
+
+	/**Null check for variable assignment*/
+
+	if (str == NULL)
+	{
+		str = "(nil)";
+	}
+
+	/**Return output on success, return 0 on fail*/
+
+	if (printed >= 0)
+	{
+		return (printed);
+	}
+	else
+	{
+		return (0);
+	}
 }
 
 /**
@@ -41,7 +61,7 @@ int print_str(va_list args)
 
 int print_int(va_list args)
 {
-    _putint(va_arg(args, int));
-    /**returning placeholder*/
-    return (0);
+	_putint(va_arg(args, int));
+	/**returning placeholder*/
+	return (1);
 }

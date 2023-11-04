@@ -6,27 +6,34 @@
 
 int _printf(const char *format, ...)
 {
-/**int i = 0;**/
-    int tracker = 0;
+	/**int i = 0;**/
+	int tracker = 0;
 
-    va_list args;
-    va_start(args, format);
+	va_list args;
+	va_start(args, format);
 
+	if (!format)
+	{
+		_putchar('\n');
+		return (0);
+	}
 
-    while (*format != '\0')
-    {
-        if (*format == '%') 
-        {
-            format++;
-            tracker += (get_func(*format)(args));
-            format++;
-        }
-        else
-        {
-            _putchar(*format);
-            tracker += 1;
-            format++;
-        }
-    }
-    return (tracker);
+	while (*format != '\0')
+	{
+		if (*format == '%')
+		{
+			format++;
+			return (get_func(*format)(args));
+			tracker += 2;
+		}
+		else
+		{
+			_putchar(*format);
+			tracker += 1;
+		}
+		format++;
+	}
+	va_end(args);
+
+	return (tracker);
 }
