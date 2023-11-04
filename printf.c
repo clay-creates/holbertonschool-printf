@@ -21,9 +21,12 @@ int _printf(const char *format, ...)
             tracker += (get_func(*format)(args));
             format++;
         }
-    _putchar(*format);
-    tracker += 1;
-    format++;
+        else
+        {
+            _putchar(*format);
+            tracker += 1;
+            format++;
+        }
     }
     return (tracker);
 }
