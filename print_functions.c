@@ -26,9 +26,27 @@ int print_char(va_list args)
 
 int print_str(va_list args)
 {
-    fputs(va_arg(args, char *), stdout);
-    /**returning placeholder*/
-    return (0);
+    char *str = va_arg(args, char *);
+
+    /**Null check for variable assignment*/
+
+    if (str == NULL)
+    {
+        str = "(nil)";
+    }
+
+    int printed = fputs(str, stdout);
+
+    /**Return output on success, return 0 on fail*/
+
+    if (printed >= 0)
+    {
+        return (printed);
+    }
+    else
+    {
+        return (0);
+    }
 }
 
 /**
