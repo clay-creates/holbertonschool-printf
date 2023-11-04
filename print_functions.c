@@ -26,7 +26,7 @@ int print_char(va_list args)
 
 int print_str(va_list args)
 {
-    puts(va_arg(args, char *));
+    fputs(va_arg(args, char *), stdout);
     /**returning placeholder*/
     return (0);
 }
