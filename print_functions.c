@@ -29,8 +29,8 @@ int print_str(va_list args)
     char *str;
     int printed;
 
-    printed = fputs(str, stdout);
     str = va_arg(args, char *);
+    printed = fputs(str, stdout);
 
     /**Null check for variable assignment*/
 
