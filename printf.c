@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 		else if (*format == '%')
 		{
 			format += 2;
-			tracker += (get_func(*format)(args));
+			tracker += (get_func(*format + 1)(args));
 			skip = 1; /** Set flag to skip character */
 		}
 		else
