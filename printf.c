@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 
 	if (!format)
 	{
-		fputs("\n", stdout);
+		_putchar('\n');
 		return (0);
 	}
 
