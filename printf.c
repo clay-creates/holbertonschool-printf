@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
         if (*format == '%') 
         {
             format++;
-            tracker += (get_func(*format)(args));
+            tracker += (get_func(*format)(va_arg(args)));
             format++;
         }
         else
