@@ -13,6 +13,7 @@
 int print_char(va_list args)
 {
     putchar(va_arg(args, int));
+    return (1);
 }
 
 /**
@@ -26,6 +27,8 @@ int print_char(va_list args)
 int print_str(va_list args)
 {
     puts(va_arg(args, char *));
+    /**returning placeholder*/
+    return (0);
 }
 
 /**
@@ -39,4 +42,6 @@ int print_str(va_list args)
 int print_int(va_list args)
 {
     _putint(va_arg(args, int));
+    /**returning placeholder*/
+    return (0);
 }
