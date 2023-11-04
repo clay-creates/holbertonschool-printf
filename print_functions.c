@@ -12,9 +12,8 @@
 
 int print_char(va_list args)
 {
-    putchar(va_arg(args, int));
-    /**returning placeholder*/
-    return (0);
+    return (putchar(va_arg(args, int)));
+    /**return (1);*/
 }
 
 /**
