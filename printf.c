@@ -9,28 +9,36 @@ int _printf(const char *format, ...)
 	/**int i = 0;**/
 	int tracker = 0;
 
+	/**Flag to skip next character after "%"*/
+	int skip = 0;
+
 	va_list args;
 	va_start(args, format);
 
 	if (!format)
 	{
+		_putchar("\n");
 		return (0);
 	}
 
 	while (*format != '\0')
 	{
-		if (*format == '%')
+		if (skip)
+		{
+			skip = 0; /** Reset the flag and do not advance*/
+		}
+		else if
 		{
 			format++;
 			tracker += (get_func(*format)(args));
-			format++;
+			skip = 1; /** Set flag to skip character */
 		}
 		else
 		{
 			_putchar(*format);
 			tracker += 1;
-			format++;
 		}
+		format++;
 	}
 	return (tracker);
 }
