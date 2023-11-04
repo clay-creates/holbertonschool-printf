@@ -13,7 +13,7 @@
 int print_char(va_list args)
 {
 	putchar(va_arg(args, int));
-	return (1);
+	return (0);
 }
 
 /**
@@ -63,5 +63,5 @@ int print_int(va_list args)
 {
 	_putint(va_arg(args, int));
 	/**returning placeholder*/
-	return (0);
+	return (1);
 }
