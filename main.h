@@ -32,5 +32,6 @@ int print_int(va_list args);
 
 int _putint(char);
 int _putchar(char);
+int _strlen(char *s);
 
 #endif
