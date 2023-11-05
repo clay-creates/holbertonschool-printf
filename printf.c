@@ -8,6 +8,8 @@ int _printf(const char *format, ...)
 {
 	/**int i = 0;**/
 	int tracker = 0;
+	int func_return = 0;
+	int (*format_print)(int)
 
 	va_list args;
 	va_start(args, format);
@@ -23,7 +25,12 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			tracker += (get_func(*format)(args));
+			format_print = get_func(*format);
+			if format_print != NULL
+				func_return = format_print(args);
+				if (func_return = -1)
+					return (-1);
+				tracker += func_return;
 			format++;
 		}
 		else
