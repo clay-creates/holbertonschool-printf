@@ -68,8 +68,9 @@ int print_int(va_list args)
 	return (1);
 }
 
-int print_percent(void)
+int print_percent(va_list args)
 {
+    (void)args;
     putchar ('%');
     return (1);
 }
