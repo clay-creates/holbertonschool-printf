@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 
 	while (*format != '\0')
 	{
-		printf("loop iteration: %d", tracker);
+		printf("loop iteration: %d\n", tracker);
 		if (*format == '%')
 		{
 			format++;
@@ -37,7 +37,6 @@ int _printf(const char *format, ...)
 				tracker += func_return;
 				printf("func_return value: %d", func_return);
 			}
-			format++;
 		}
 		else
 		{
