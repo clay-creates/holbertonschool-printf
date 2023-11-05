@@ -7,6 +7,7 @@ int (*get_func(char format))(va_list args)
 		{'c', print_char},
 		{'s', print_str},
 		{'d', print_int},
+		{'%', print_percent},
 		{'\0', NULL}};
 
 	int i = 0;
