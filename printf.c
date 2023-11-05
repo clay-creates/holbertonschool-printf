@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 					return (-1);
 				}
 				tracker += func_return;
-				printf("func_return value: %d", func_return)
+				printf("func_return value: %d", func_return);
 			}
 			format++;
 		}
