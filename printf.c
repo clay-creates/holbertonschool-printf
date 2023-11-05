@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 
 	while (*format != '\0')
 	{
-		printf("loop iteration: %d\n", tracker);
+		/**printf("loop iteration: %d\n", tracker);**/
 		if (*format == '%')
 		{
 			format++;
@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 					return (-1);
 				}
 				tracker += func_return;
-				printf("func_return value: %d", func_return);
+				/**printf("\nfunc_return value: %d\n", func_return);**/
 			}
 		}
 		else
@@ -46,6 +46,6 @@ int _printf(const char *format, ...)
 		format++;
 	}
 	va_end(args);
-	printf("\nstring length: %d\n", tracker);
+	/**printf("\nstring length: %d\n", tracker);**/
 	return (tracker);
 }
