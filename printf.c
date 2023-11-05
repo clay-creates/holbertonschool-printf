@@ -23,8 +23,8 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			return (get_func(*format)(args));
-			tracker += 2;
+			tracker += (get_func(*format)(args));
+			format++;
 		}
 		else
 		{
