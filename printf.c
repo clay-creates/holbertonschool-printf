@@ -9,7 +9,7 @@ int _printf(const char *format, ...)
 	/**int i = 0;**/
 	int tracker = 0;
 	int func_return = 0;
-	int (*format_print)(int)
+	int (*format_print)(int);
 
 	va_list args;
 	va_start(args, format);
