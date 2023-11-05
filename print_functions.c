@@ -12,8 +12,8 @@
 
 int print_char(va_list args)
 {
-    char var_char;
-    var_char = va_arg(args, int);
+	char var_char;
+	var_char = va_arg(args, int);
 	putchar(var_char);
 	return (1);
 }
@@ -70,7 +70,7 @@ int print_int(va_list args)
 
 int print_percent(va_list args)
 {
-    (void)args;
-    putchar ('%');
-    return (1);
+	(void)args;
+	putchar('%');
+	return (1);
 }
