@@ -45,7 +45,7 @@ int print_str(va_list args)
 
 	if (printed >= 0)
 	{
-		return (_strlen(*str));
+		return (_strlen(str));
 	}
 	else
 	{
