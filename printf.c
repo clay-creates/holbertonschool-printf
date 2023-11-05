@@ -22,6 +22,7 @@ int _printf(const char *format, ...)
 
 	while (*format != '\0')
 	{
+		printf("loop iteration: %d", tracker)
 		if (*format == '%')
 		{
 			format++;
