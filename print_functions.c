@@ -12,7 +12,9 @@
 
 int print_char(va_list args)
 {
-	putchar(va_arg(args, int));
+    char var_char;
+    var_char = va_arg(args, int);
+	putchar(var_char);
 	return (1);
 }
 
@@ -43,7 +45,7 @@ int print_str(va_list args)
 
 	if (printed >= 0)
 	{
-		return (printed);
+		return (_strlen(str));
 	}
 	else
 	{
@@ -64,4 +66,11 @@ int print_int(va_list args)
 	_putint(va_arg(args, int));
 	/**returning placeholder*/
 	return (1);
+}
+
+int print_percent(va_list args)
+{
+    (void)args;
+    putchar ('%');
+    return (1);
 }
