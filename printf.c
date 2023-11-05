@@ -27,10 +27,14 @@ int _printf(const char *format, ...)
 			format++;
 			format_print = get_func(*format);
 			if (format_print != NULL)
+			{
 				func_return = format_print(args);
 				if (func_return == -1)
+				{
 					return (-1);
+				}
 				tracker += func_return;
+			}
 			format++;
 		}
 		else
