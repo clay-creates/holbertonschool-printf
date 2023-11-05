@@ -9,7 +9,7 @@ int _printf(const char *format, ...)
 	/**int i = 0;**/
 	int tracker = 0;
 	int func_return = 0;
-	int (*format_print)(int);
+	int (*format_print)(va_list);
 
 	va_list args;
 	va_start(args, format);
@@ -26,9 +26,9 @@ int _printf(const char *format, ...)
 		{
 			format++;
 			format_print = get_func(*format);
-			if format_print != NULL
+			if (format_print != NULL)
 				func_return = format_print(args);
-				if (func_return = -1)
+				if (func_return == -1)
 					return (-1);
 				tracker += func_return;
 			format++;
