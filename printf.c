@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 					return (-1);
 				}
 				tracker += func_return;
-				printf("\nfunc_return value: %d\n", func_return);
+				/**printf("\nfunc_return value: %d\n", func_return);**/
 			}
 		}
 		else
@@ -45,6 +45,6 @@ int _printf(const char *format, ...)
 		format++;
 	}
 	va_end(args);
-	printf("\nstring length: %d\n", tracker);
+	/**printf("\nstring length: %d\n", tracker);**/
 	return (tracker);
 }
