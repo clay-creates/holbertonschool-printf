@@ -45,6 +45,6 @@ int _printf(const char *format, ...)
 		format++;
 	}
 	va_end(args);
-	printf("%d", tracker);
+	printf("\nstring length: %d\n", tracker);
 	return (tracker);
 }
