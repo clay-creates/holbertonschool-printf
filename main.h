@@ -29,7 +29,7 @@ int _printf(const char *format, ...);
 int print_char(va_list args);
 int print_str(va_list args);
 int print_int(va_list args);
-int print_percent(void);
+int print_percent(va_list args);
 
 int _putint(char);
 int _putchar(char);
