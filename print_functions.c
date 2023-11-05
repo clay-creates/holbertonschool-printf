@@ -12,7 +12,8 @@
 
 int print_char(va_list args)
 {
-	putchar(va_arg(args, int));
+    var_char = va_arg(args, int);
+	putchar(var_char);
 	return (1);
 }
 
