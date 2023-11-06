@@ -30,28 +30,29 @@ int print_char(va_list args)
 int print_str(va_list args)
 {
 	char *str;
-	int printed;
+	int len = 0;
+	int i;
 
 	str = va_arg(args, char *);
-	printed = fputs(str, stdout);
 
-	/**Null check for variable assignment*/
-
-	if (str == NULL)
+	if (str != NULL)
 	{
-		str = "(nil)";
-	}
-
-	/**Return output on success, return 0 on fail*/
-
-	if (printed >= 0)
-	{
-		return (_strlen(str));
+		len = strlen(str);
+		for (i = 0; i < len; i++)
+		{
+			_putchar(str[i]);
+		}
 	}
 	else
 	{
-		return (0);
+		str = "(null)";
+		len = 6;
+		for (i = 0; i < len; i++)
+		{
+			_putchar(str[i]);
+		}
 	}
+	return (len);
 }
 
 /**
@@ -86,12 +87,12 @@ int print_int(va_list args)
 	num_len = abs_val;
 	digit_tracker = 1;
 
-/**this is where you'll want to reference atoi for documentation
- * the iteration is similar
- * knock one of them back a digit, increase the digit of the other
- * then print them modulos from dividing by 10
- * that makes sense, yeah?
-*/
+	/**this is where you'll want to reference atoi for documentation
+	 * the iteration is similar
+	 * knock one of them back a digit, increase the digit of the other
+	 * then print them modulos from dividing by 10
+	 * that makes sense, yeah?
+	 */
 	while (digit_tracker > 9)
 	{
 		if (num_len > 9)
@@ -102,7 +103,7 @@ int print_int(va_list args)
 	}
 	while (digit_tracker > 1)
 	{
-		if(val == INT_MIN && digit_tracker == 1)
+		if (val == INT_MIN && digit_tracker == 1)
 		{
 			putchar('8'); /**honestly please ask Cody about this I legit dk what the hecky is happening*/
 			func_return++;
