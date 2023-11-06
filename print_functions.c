@@ -68,6 +68,8 @@ int print_int(va_list args)
 /**
  * print_percent - prints a percent sign
  * @args: va_list args (not used in output)
+ *
+ * Return: return 1 on success
  */
 
 int print_percent(va_list args)
