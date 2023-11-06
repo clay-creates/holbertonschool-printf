@@ -26,6 +26,12 @@ int _printf(const char *format, ...)
 	{
 		if (*format == '%')
 		{
+			if (args == NULL)
+			{
+				printf("(null)");
+				format++;
+				continue;
+			}
 			format++;
 			if (!format)
 			{
