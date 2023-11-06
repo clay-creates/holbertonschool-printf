@@ -22,11 +22,6 @@ int _printf(const char *format, ...)
 
 	if (!format)
 	{
-		null_form = "(null)";
-		for (i = 0; i < 6; i++)
-		{
-			_putchar(null_form[i]);
-		}
 		return (-1);
 	}
 	while (*format != '\0')
