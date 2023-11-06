@@ -40,7 +40,11 @@ int print_str(va_list args)
 
 	if (str == NULL)
 	{
-		str = "(nil)";
+		str = "(null)";
+		for (i = 0; i < 6; i++)
+		{
+			_putchar(str[i]);
+		}
 	}
 
 	/**Return output on success, return 0 on fail*/
@@ -51,12 +55,7 @@ int print_str(va_list args)
 	}
 	else
 	{
-		str = "(null)";
-		for (i = 0; i < 6; i++)
-		{
-			_putchar(str[i]);
-		}
-		return (_strlen(str));
+		return (0);
 	}
 }
 
