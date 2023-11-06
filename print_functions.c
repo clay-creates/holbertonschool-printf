@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 
 /**
  * print_char - prints a character
@@ -66,17 +67,17 @@ int print_int(va_list args)
 	int abs_val, num_len, digit_tracker;
 	int val = va_arg(args, int);
 
-	if (val == int_min)
-	{
-		putchar('-')
-		func_return++;
-		abs_val = int_max;
-	}
-	else if (value < 0)
+	if (val == INT_MIN)
 	{
 		putchar('-');
 		func_return++;
-		abs_calc = value * -1;
+		abs_val = INT_MAX;
+	}
+	else if (val < 0)
+	{
+		putchar('-');
+		func_return++;
+		abs_val = val * -1;
 	}
 	else
 	{
