@@ -17,6 +17,7 @@ int _printf(const char *format, ...)
 	int (*format_print)(va_list);
 
 	va_list args;
+
 	va_start(args, format);
 
 	if (!format)
