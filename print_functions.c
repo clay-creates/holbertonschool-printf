@@ -99,7 +99,9 @@ int print_int(va_list args)
 			num_len = num_len / 10;
 			digit_tracker = digit_tracker * 10;
 		}
-		while (track_dig > 1)
+	while (digit_tracker > 1)
+	{
+		if(val == INT_MIN && digit_tracker == 1)
 		{
 			putchar('8'); /**honestly please ask Cody about this I legit dk what the hecky is happening*/
 			func_return++;
