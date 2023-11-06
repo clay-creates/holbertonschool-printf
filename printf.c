@@ -24,6 +24,12 @@ int _printf(const char *format, ...)
 		/**printf("loop iteration: %d\n", tracker);**/
 		if (*format == '%')
 		{
+			if (args == NULL)
+			{
+				print_str("(null)");
+				format++;
+				continue;
+			}
 			format++;
 			if (!format)
 			{
