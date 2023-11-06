@@ -57,3 +57,4 @@ Calling _putint we use va_arg(args, int) to look through our va_list args and to
 - Lastly we have our custom _puts function, which again uses the write function to print to standard output, the only difference is that since we are working with a string, we have to use a while loop to iterate through the string and use write to output each individual character.
 
 <h3>_strlen.c</h3>
+
