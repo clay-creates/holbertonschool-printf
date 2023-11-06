@@ -14,12 +14,19 @@ int _printf(const char *format, ...)
 	int tracker = 0;
 	int func_return = 0;
 	int (*format_print)(va_list);
+	char *null_form;
+	int i;
 	va_list args;
 
 	va_start(args, format);
 
 	if (!format)
 	{
+		null_form = "(null)";
+		for (i = 0; i < 6; i++)
+		{
+			_putchar(null_form[i]);
+		}
 		return (-1);
 	}
 	while (*format != '\0')
