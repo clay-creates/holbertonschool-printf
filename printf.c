@@ -2,7 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/***/
+/**
+ * _printf - format print, looks for format and prints to stout
+ * @format: input string
+ *
+ * Return: return printed character count
+ */
 
 int _printf(const char *format, ...)
 {
