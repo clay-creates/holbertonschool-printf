@@ -2,27 +2,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/***/
+/**
+ * _printf - format print, looks for format and prints to stout
+ * @format: input string
+ *
+ * Return: return printed character count
+ */
 
 int _printf(const char *format, ...)
 {
-	/**int i = 0;**/
 	int tracker = 0;
 	int func_return = 0;
 	int (*format_print)(va_list);
-
-
 	va_list args;
+
 	va_start(args, format);
 
 	if (!format)
 	{
 		return (-1);
 	}
-
 	while (*format != '\0')
 	{
-		/**printf("loop iteration: %d\n", tracker);**/
 		if (*format == '%')
 		{
 			if (args == NULL)
@@ -46,7 +47,6 @@ int _printf(const char *format, ...)
 					return (-1);
 				}
 				tracker += func_return;
-				/**printf("\nfunc_return value: %d\n", func_return);**/
 			}
 		}
 		else
@@ -57,6 +57,5 @@ int _printf(const char *format, ...)
 		format++;
 	}
 	va_end(args);
-	/**printf("\nstring length: %d\n", tracker);**/
 	return (tracker);
 }

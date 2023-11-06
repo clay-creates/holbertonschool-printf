@@ -4,8 +4,7 @@
 
 /**
  * print_char - prints a character
- * @va_list: list of arguments passed to printf
- * @op_list: array of format specifiers
+ * @args: va_list args
  *
  * Return: return 1 on success, NULL on fail
  */
@@ -13,15 +12,16 @@
 int print_char(va_list args)
 {
 	char var_char;
+
 	var_char = va_arg(args, int);
+
 	putchar(var_char);
 	return (1);
 }
 
 /**
  * print_str - prints a string
- * @va_list: list of arguments passed to printf
- * @op_list: array of format specifiers
+ * @args: va_list args
  *
  * Return: return 1 on success or NULL on fail
  */
@@ -55,8 +55,7 @@ int print_str(va_list args)
 
 /**
  * print_int - prints integer(s)
- * @va_list: list of arguments passed to printf
- * @op_list: array of format specifiers
+ * @args: va_list args
  *
  * Return: returns 1 on success or NULL on fail
  */
@@ -67,6 +66,13 @@ int print_int(va_list args)
 	/**returning placeholder*/
 	return (1);
 }
+
+/**
+ * print_percent - prints a percent sign
+ * @args: va_list args (not used in output)
+ *
+ * Return: return 1 on success
+ */
 
 int print_percent(va_list args)
 {
