@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 		{
 			if (args == NULL)
 			{
-				printf("(null)")
+				printf("(null)");
 				format++;
 				continue;
 			}
