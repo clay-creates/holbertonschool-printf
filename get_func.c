@@ -1,6 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 
+/**
+ *
+ */
+
 int (*get_func(char format))(va_list args)
 {
 	form forms[] = {
