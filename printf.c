@@ -25,6 +25,11 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
+			if (!format)
+			{
+				putchar('\n');
+				return (0);
+			}
 			format_print = get_func(*format);
 			if (format_print != NULL)
 			{
