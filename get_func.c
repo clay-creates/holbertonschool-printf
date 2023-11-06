@@ -1,6 +1,14 @@
 #include "main.h"
 #include <stdio.h>
 
+/**
+ * get_func - function to find format specifiers and return operation
+ * @format: current character in format string
+ * @args: va_list args
+ *
+ * Return: returns function from forms array on success, NULL on fail
+ */
+
 int (*get_func(char format))(va_list args)
 {
 	form forms[] = {
