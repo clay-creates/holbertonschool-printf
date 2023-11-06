@@ -72,17 +72,19 @@ int print_int(va_list args)
 	int func_return = 0;
 	int val = va_arg(args, int);
 
+	/**Handle case of INT_MIN*/
+
 	if (val == INT_MIN)
 	{
 		putchar('-');
 		func_return++;
-		val = INT_MAX; // Handle the special case of INT_MIN.
+		val = INT_MAX;
 	}
 	else if (val < 0)
 	{
 		putchar('-');
 		func_return++;
-		val = -val; // Get the absolute value for negative integers.
+		val = -val;
 	}
 
 	if (val == 0)
@@ -94,13 +96,15 @@ int print_int(va_list args)
 	{
 		int digit_tracker = 1;
 
-		// Calculate the number of digits.
+		/**Calculate number of digits*/
+
 		while (val / digit_tracker > 9)
 		{
 			digit_tracker *= 10;
 		}
 
-		// Print the digits one by one.
+		/**Print digits*/
+
 		while (digit_tracker > 0)
 		{
 			putchar((val / digit_tracker) + '0');
