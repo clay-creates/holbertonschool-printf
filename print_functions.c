@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
-#include <string.h>
 
 /**
  * print_char - prints a character
@@ -31,29 +30,34 @@ int print_char(va_list args)
 int print_str(va_list args)
 {
 	char *str;
-	int len = 0;
+	int printed;
 	int i;
 
 	str = va_arg(args, char *);
+	printed = fputs(str, stdout);
 
-	if (str != NULL)
+	/**Null check for variable assignment*/
+
+	if (str == NULL)
 	{
-		len = strlen(str);
-		for (i = 0; i < len; i++)
-		{
-			_putchar(str[i]);
-		}
+		str = "(nil)";
+	}
+
+	/**Return output on success, return 0 on fail*/
+
+	if (printed >= 0)
+	{
+		return (_strlen(str));
 	}
 	else
 	{
 		str = "(null)";
-		len = 6;
-		for (i = 0; i < len; i++)
+		for (i = 0; i < 6; i++)
 		{
 			_putchar(str[i]);
 		}
+		return (_strlen(str));
 	}
-	return (len);
 }
 
 /**
