@@ -11,6 +11,7 @@ int _printf(const char *format, ...)
 	int func_return = 0;
 	int (*format_print)(va_list);
 
+
 	va_list args;
 	va_start(args, format);
 
@@ -24,12 +25,12 @@ int _printf(const char *format, ...)
 		/**printf("loop iteration: %d\n", tracker);**/
 		if (*format == '%')
 		{
-			if (args == NULL)
+			/**if (args == NULL)
 			{
-				print_str("(null)");
+				print_str();
 				format++;
 				continue;
-			}
+			}**/
 			format++;
 			if (!format)
 			{
