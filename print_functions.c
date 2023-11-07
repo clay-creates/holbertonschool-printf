@@ -108,8 +108,6 @@ int print_int(va_list args)
 
 	while (digit_tracker >= 1)
 	{
-		func_return++;
-
 		if (val == INT_MIN && digit_tracker == 1)
 		{
 			func_return += _putchar('8'); /**it's something about the last/first char in int min is 8*/
