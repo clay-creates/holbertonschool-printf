@@ -32,7 +32,7 @@ int print_int(va_list args);
 int print_percent(va_list args);
 
 int _putint(char);
-void _putchar(char);
+int _putchar(char);
 int _strlen(char *s);
 void _puts(const char *str);
 
