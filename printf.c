@@ -26,7 +26,8 @@ int _printf(const char *format, ...)
 	{
 		if (*format == '%')
 		{
-			/**if (args == NULL)
+			/**redundent code, done in the print_string function
+			if (args == NULL)
 			{
 				printf("(null)");
 				format++;
@@ -36,7 +37,7 @@ int _printf(const char *format, ...)
 			if (!format)
 			{
 				putchar('\n');
-				return (0);
+				tracker += 1;
 			}
 			format_print = get_func(*format);
 			if (format_print != NULL)
