@@ -70,7 +70,9 @@ int print_int(va_list args)
 	int val = va_arg(args, int);
 
 	/**Handle case of INT_MIN*/
-
+	/**Ummmmmmm all the variables I had aren't here anymore?*/
+	/**ooooohhhhh they're all down there now. Rip. I'm moving them*/
+	
 	if (val == INT_MIN)
 	{
 		putchar('-');
