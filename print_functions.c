@@ -38,7 +38,7 @@ int print_str(va_list args)
 	printed = 0;
 
 	/**Null check for variable assignment*/
-	if (str != NULL)
+	if (str == NULL)
 		str = "(null)";
 	
 	printed = _strlen(str);
