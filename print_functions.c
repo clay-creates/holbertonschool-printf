@@ -95,6 +95,9 @@ int print_int(va_list args)
 		func_return++;
 	}Gotta ask Clay about this*/
 
+	/**debug print conirmation we got here**/
+	printf("%d", func_return);
+	
 	/**Calculate number of digits*/
 	while (digit_tracker > 9)
 		{
