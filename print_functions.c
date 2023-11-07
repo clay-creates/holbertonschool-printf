@@ -77,12 +77,12 @@ int print_int(va_list args)
 	if (val == INT_MIN)
 	{
 		func_return += _putchar('-');
-		val = INT_MAX;
+		abs_val = INT_MAX;
 	}
 	else if (val < 0)
 	{
 		func_return += _putchar('-');
-		val = -val;
+		abs_val = -val;
 	}
 	
 	num_len = abs_val;
@@ -108,8 +108,6 @@ int print_int(va_list args)
 
 	while (digit_tracker >= 1)
 	{
-		func_return++;
-
 		if (val == INT_MIN && digit_tracker == 1)
 		{
 			func_return += _putchar('8'); /**it's something about the last/first char in int min is 8*/
