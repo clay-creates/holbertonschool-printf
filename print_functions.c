@@ -1,6 +1,8 @@
 #include "main.h"
 #include <stdio.h>
+#include <stddef.h>
 #include <stdlib.h>
+#include <limits.h>
 
 /**
  * print_char - prints a character
@@ -30,6 +32,7 @@ int print_str(va_list args)
 {
 	char *str;
 	int printed;
+	int i;
 
 	str = va_arg(args, char *);
 	printed = fputs(str, stdout);
@@ -38,7 +41,11 @@ int print_str(va_list args)
 
 	if (str == NULL)
 	{
-		str = "(nil)";
+		str = "(null)";
+		for (i = 0; i < 6; i++)
+		{
+			_putchar(str[i]);
+		}
 	}
 
 	/**Return output on success, return 0 on fail*/
@@ -62,9 +69,52 @@ int print_str(va_list args)
 
 int print_int(va_list args)
 {
-	_putint(va_arg(args, int));
-	/**returning placeholder*/
-	return (1);
+	int func_return = 0;
+	int val = va_arg(args, int);
+
+	/**Handle case of INT_MIN*/
+
+	if (val == INT_MIN)
+	{
+		putchar('-');
+		func_return++;
+		val = INT_MAX;
+	}
+	else if (val < 0)
+	{
+		putchar('-');
+		func_return++;
+		val = -val;
+	}
+
+	if (val == 0)
+	{
+		putchar('0');
+		func_return++;
+	}
+	else
+	{
+		int digit_tracker = 1;
+
+		/**Calculate number of digits*/
+
+		while (val / digit_tracker > 9)
+		{
+			digit_tracker *= 10;
+		}
+
+		/**Print digits*/
+
+		while (digit_tracker > 0)
+		{
+			putchar((val / digit_tracker) + '0');
+			func_return++;
+			val %= digit_tracker;
+			digit_tracker /= 10;
+		}
+	}
+
+	return func_return;
 }
 
 /**
