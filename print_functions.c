@@ -68,50 +68,58 @@ int print_int(va_list args)
 {
 	int func_return = 0;
 	int val = va_arg(args, int);
-
-	/**Handle case of INT_MIN*/
+	int abs_val;
+	int num_len;
+	int digit_tracker;
 
 	if (val == INT_MIN)
 	{
-		putchar('-');
-		func_return++;
+		func_return += _putchar('-');
 		val = INT_MAX;
 	}
 	else if (val < 0)
 	{
-		putchar('-');
-		func_return++;
+		func_return += _putchar('-');
 		val = -val;
-	}
-
-	if (val == 0)
-	{
-		putchar('0');
-		func_return++;
 	}
 	else
 	{
-		int digit_tracker = 1;
+		abs_val = val;
+	}
+	num_len = abs_val;
+	digit_tracker = 1;
 
-		/**Calculate number of digits*/
+	/**if (val == 0)
+	{
+		putchar('0');
+		func_return++;
+	}Gotta ask Clay about this*/
 
-		while (val / digit_tracker > 9)
+	/**Calculate number of digits*/
+	while (digit_tracker > 9)
 		{
-			digit_tracker *= 10;
+			if (num_len > 9)
+			{
+				num_len = num_len / 10;
+				digit_tracker = digit_tracker * 10;
+			}
 		}
 
-		/**Print digits*/
-
-		while (digit_tracker > 0)
+	while (digit_tracker > 1)
+	{
+		if (val == INT_MIN && digit_tracker == 1)
 		{
-			putchar((val / digit_tracker) + '0');
-			func_return++;
-			val %= digit_tracker;
-			digit_tracker /= 10;
+			func_return += _putchar('8'); /**it's something about the last/first char in int min is 8*/
+			digit_tracker = digit_tracker / 10;
+		}
+		else
+		{
+			func_return += _putchar(((abs_val / digit_tracker) % 10) + '0');
+			digit_tracker = digit_tracker /10;
 		}
 	}
 
-	return func_return;
+	return (func_return);
 }
 
 /**
