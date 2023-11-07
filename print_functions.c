@@ -72,6 +72,8 @@ int print_int(va_list args)
 	int num_len;
 	int digit_tracker;
 
+	abs_val = val;
+
 	if (val == INT_MIN)
 	{
 		func_return += _putchar('-');
@@ -82,10 +84,7 @@ int print_int(va_list args)
 		func_return += _putchar('-');
 		val = -val;
 	}
-	else
-	{
-		abs_val = val;
-	}
+	
 	num_len = abs_val;
 	digit_tracker = 1;
 
@@ -100,18 +99,17 @@ int print_int(va_list args)
 
 	/**Calculate number of digits*/
 	while (digit_tracker > 9)
-		{
-			if (num_len > 9)
-			{
-				num_len = num_len / 10;
-				digit_tracker = digit_tracker * 10;
-				/**another debug print*/
-				printf("num_len: %d\ndigit_tracker: %d", num_len, digit_tracker);
-			}
-		}
-
-	while (digit_tracker > 1)
 	{
+		num_len = num_len / 10;
+		digit_tracker = digit_tracker * 10;
+		/**another debug print*/
+		printf("num_len: %d\ndigit_tracker: %d", num_len, digit_tracker);
+	}
+
+	while (digit_tracker >= 1)
+	{
+		func_return++;
+		
 		if (val == INT_MIN && digit_tracker == 1)
 		{
 			func_return += _putchar('8'); /**it's something about the last/first char in int min is 8*/
