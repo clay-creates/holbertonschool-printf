@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-07T00:20:11.145Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/119.0" etag="ZF4BRzyNMy8KP2T8kwHH" version="22.0.8" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-11-07T00:30:16.107Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/119.0" etag="v-w7vQerILQ2bvRoDxYO" version="22.0.8" type="github" pages="2">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="printf.c">
     <mxGraphModel dx="469" dy="891" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -112,10 +112,31 @@
     </mxGraphModel>
   </diagram>
   <diagram id="kbL-4L35anQE_Gjt7S1f" name="get_func.c">
-    <mxGraphModel dx="399" dy="757" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1249" dy="757" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="de-vCdMKQyoW2d9XjAgy-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="de-vCdMKQyoW2d9XjAgy-1" target="de-vCdMKQyoW2d9XjAgy-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="de-vCdMKQyoW2d9XjAgy-1" value="&lt;div&gt;Receive call&amp;nbsp;&lt;/div&gt;&lt;div&gt;from printf.c&amp;nbsp;&lt;/div&gt;&lt;div&gt;(after finding &quot;%&quot;)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D9FX7iaWJNPIfa-2GkmN-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="de-vCdMKQyoW2d9XjAgy-2" target="D9FX7iaWJNPIfa-2GkmN-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D9FX7iaWJNPIfa-2GkmN-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="de-vCdMKQyoW2d9XjAgy-2" target="D9FX7iaWJNPIfa-2GkmN-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="de-vCdMKQyoW2d9XjAgy-2" value="Does format specifier exist?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D9FX7iaWJNPIfa-2GkmN-1" value="Return function to assign proper data type" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D9FX7iaWJNPIfa-2GkmN-3" value="Return NULL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="350" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
