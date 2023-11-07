@@ -77,12 +77,12 @@ int print_int(va_list args)
 	if (val == INT_MIN)
 	{
 		func_return += _putchar('-');
-		val = INT_MAX;
+		abs_val = INT_MAX;
 	}
 	else if (val < 0)
 	{
 		func_return += _putchar('-');
-		val = -val;
+		abs_val = -val;
 	}
 	
 	num_len = abs_val;
