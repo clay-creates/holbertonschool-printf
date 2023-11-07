@@ -96,7 +96,7 @@ int print_int(va_list args)
 	}Gotta ask Clay about this*/
 
 	/**debug print conirmation we got here**/
-	printf("current count: %d", func_return);
+	printf("current func_return: %d\n", func_return);
 
 	/**Calculate number of digits*/
 	while (digit_tracker > 9)
@@ -105,6 +105,8 @@ int print_int(va_list args)
 			{
 				num_len = num_len / 10;
 				digit_tracker = digit_tracker * 10;
+				/**another debug print*/
+				printf("num_len: %d\ndigit_tracker: %d", num_len, digit_tracker);
 			}
 		}
 
