@@ -1,0 +1,59 @@
+.\" _printf man page
+.TH man 3 "06 November 2023" "1.0" "_printf man page"
+.SH NAME
+_printf \- prints formatted data according to format specifiers.
+
+.SH SYNOPSIS
+#include "main.h"
+
+int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+_printf() will return the length of the string it prints, while printing a variety of data types into standard output.
+
+.SS Format of output
+Save for the percent sign, the format of the output will be iterated through like any other character string.
+As the program finds the percent sign (aka the format specifier flag,) it will replace the flag with the variable passed in, in order corresponding.
+
+.SS Conversion specifiers
+These are the various flags that can be used in this function.
+
+.B
+.IP "d, i"
+Int is converted into a decimal, then they both are printed in character format.
+.B
+.IP c
+The argument is brought in as an corresponding ASCII value, which is then printed in character format.
+.B
+.IP s
+The expected argument is a pointer to a one-dimensional character array (AKA a string)
+The string is printed up to the terminating null byte, followed by a new null byte provided by the code.
+.B
+.IP %
+A way of denoting a percent sign within the string
+
+.SH RETURN VALUE
+Upon success, _printf() will return the string length that it prints, not including the terminating null byte.
+Upon encountering an error, a negative value will be returned instead.
+
+.SH EXAMPLES
+.B
+.IP Simple String followed by a new line
+.IP _printf("%s\n", "Hello world!");
+
+.B
+.IP An integer in the middle of the string
+.IP _printf("there are %d many pieces of candy in the bowl", 38);
+
+.B
+.IP An order you may see at Waffle House
+.IP _printf("I would like %d %s please.", 5, "pancakes")
+
+.IP Or, another way, where x is the amount of items and menu_item is the item in question
+.IP _printf("I would like %d %s please.", x, menu_item)
+
+.SH SEE ALSO
+printf(1), printf(3), puts(3), scanf(3)
+
+.SH AUTHORS
+Clay Jones and Ace Morton
