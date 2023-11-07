@@ -98,7 +98,7 @@ int print_int(va_list args)
 	printf("current func_return: %d\n", func_return);
 
 	/**Calculate number of digits*/
-	while (digit_tracker > 9)
+	while (num_len > 9)
 	{
 		num_len = num_len / 10;
 		digit_tracker = digit_tracker * 10;
@@ -109,7 +109,7 @@ int print_int(va_list args)
 	while (digit_tracker >= 1)
 	{
 		func_return++;
-		
+
 		if (val == INT_MIN && digit_tracker == 1)
 		{
 			func_return += _putchar('8'); /**it's something about the last/first char in int min is 8*/
