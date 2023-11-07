@@ -35,28 +35,26 @@ int print_str(va_list args)
 	int i;
 
 	str = va_arg(args, char *);
-	printed = fputs(str, stdout);
+	printed = 0;
 
 	/**Null check for variable assignment*/
-
-	if (str == NULL)
-	{
+	if (str != NULL)
 		str = "(null)";
-		for (i = 0; i < 6; i++)
-		{
-			_putchar(str[i]);
-		}
-	}
+	
+	printed = _strlen(str);
 
-	/**Return output on success, return 0 on fail*/
+	for (i = 0; i < printed; i++)
+		_putchar(str[i]);
+
+	/**Return output on success, return -1 on fail*/
 
 	if (printed >= 0)
 	{
-		return (_strlen(str));
+		return (printed);
 	}
 	else
 	{
-		return (0);
+		return (-1);
 	}
 }
 
