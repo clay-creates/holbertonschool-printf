@@ -26,12 +26,12 @@ int _printf(const char *format, ...)
 	{
 		if (*format == '%')
 		{
-			if (args == NULL)
+			/**if (args == NULL)
 			{
 				printf("(null)");
 				format++;
 				continue;
-			}
+			}**/
 			format++;
 			if (!format)
 			{
@@ -51,8 +51,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			putchar(*format);
-			tracker += 1;
+			tracker += _putchar(*format);
 		}
 		format++;
 	}
